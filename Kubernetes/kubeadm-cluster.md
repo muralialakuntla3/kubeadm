@@ -9,7 +9,7 @@
 - Familiarity with the [Kubernetes Components](https://kubernetes.io/docs/concepts/overview/components/).
 - On-Primises should have three VMs or Three Physical servers with communication enabled between them (Network)
 
-## Part A - Controller and Worker Nodes
+## Part A - Controller and Worker Nodes ( on 3 servers )
 
 1. Configure Network Prerequisites 
 
@@ -201,7 +201,7 @@
     Ensure to install `kubeadm`, `kubelet`, and `kubectl` on **all** nodes.
 
 
-## Part B - Controller Node ONLY
+## Part B - Controller Node ONLY ( Master Node )
 
 Run these commands only on the VM designated as the controller (master) node.
 
@@ -241,7 +241,7 @@ Run these commands only on the VM designated as the controller (master) node.
         ```
         kubeadm token create --print-join-command
         ```
-## Part C - Worker Nodes ONLY
+## Part C - Worker Nodes ONLY ( In Worker Node )
 
 Copy the output of the cluster join command from the previous step and run on the VMs designated as the worker nodes.
 
